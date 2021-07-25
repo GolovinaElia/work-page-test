@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order page</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section class="page">
+      <div class="container">
+        <div class="header">
+          <h1 class="title">Оформление заказа</h1>
+          <!--Таймер-->
+          <div class="timer" id="timer-1">
+            <h2 class="title-timer">До окончания акции:</h2>
+            <div class="field">
+              <span class="value" data-value="days">00</span>
+              <span class="label">Дни</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-value="hours">00</span>
+              <span class="label">Часы</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-value="mins">00</span>
+              <span class="label">Минуты</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-value="secs">00</span>
+              <span class="label">Секунды</span>
+            </div>
+          </div>
+        </div>
+        <!--Товар-->
+        <div class="goods">
+          <img
+            class="page-img"
+            src="./images/flowers.jpg"
+            alt="корзина цветов"
+            width="500"
+            height="500"
+          />
+          <div class="page-goods">
+            <h2 class="title-name">Корзина с цветами</h2>
+            <ul class="page-list">
+              <h3 class="title-page-list">Состав</h3>
+              <li class="page-item list">Эустома 11</li>
+              <li class="page-item list">Роза пионовидная кустовая 20</li>
+              <li class="page-item list">Роза кустовая 20</li>
+              <li class="page-item list">Эвкалипт 15</li>
+              <li class="page-item list">Пиафлор (оазис) 1</li>
+              <li class="page-item list">Корзина большая 1</li>
+            </ul>
+            <ul class="page-list">
+              <h3 class="title-page-list">Размер</h3>
+              <li class="page-item list">Высота 40см</li>
+              <li class="page-item list">Ширина 50см</li>
+            </ul>
+            <h3 class="title-price">
+              Цена:
+              <span
+                role="img"
+                aria-label="currency sign called hryvnia"
+                class="title-price-item"
+                >7 225,00 ₴</span
+              >
+            </h3>
+            <p class="title-price-list">
+              <span
+                role="img"
+                aria-label="currency sign called hryvnia"
+                class="title-price-item-new"
+                >5 0000,00 ₴</span
+              >
+            </p>
+          </div>
+          <!--Форма заказа-->
+          <form action="#" class="form">
+            <h2 class="title-form">Контактная информация</h2>
+            <input
+              class="name"
+              type="text"
+              name="name"
+              autofocus
+              placeholder="Введите имя*"
+              autocomplete="off"
+              pattern="^[a-zA-Zа-яА-Я]*$"
+              title="Имя может состоять только из букв. Например Иван, Анастасия и т. п."
+              data-length="2"
+              maxlength="32"
+              required
+            />
+            <p class="error-answer-name is-hidden">
+              Для оформления заказа необходимо ввести свое имя!
+            </p>
+            <input
+              class="number"
+              type="text"
+              name="phone"
+              placeholder="Введите номер телефона*"
+              data-mask="+380_________"
+              pattern="^\+380\d{2}\d{3}\d{2}\d{2}$"
+              data-length="13"
+              autocomplete="off"
+              title="Номер телефона должен состоять из 12 цифр и должен начинаться с +380"
+              required
+            />
+            <p class="error-answer-number is-hidden">
+              Для оформления заказа необходимо ввести свой номер телефона!
+            </p>
+            <button type="submit" class="button">Заказать</button>
+          </form>
+          <div class="answer-form-container is-hidden">
+            <p class="answer-form">
+              Заказ успешно создан! Специалист свяжется с вами в ближайшее
+              время.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/timer.js" type="module"></script>
+    <script src="./js/form.js" type="module"></script>
+    <script src="./js/validate-number.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
