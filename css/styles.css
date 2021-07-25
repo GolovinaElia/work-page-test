@@ -156,9 +156,6 @@ input.invalid {
   background-color: var(--description-color);
 }
 .answer-form {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 300px;
   margin-top: 125px;
   font-size: 24px;

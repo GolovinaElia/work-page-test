@@ -12,11 +12,8 @@ form.onsubmit = async (event) => {
     let text = await response.text()
     form.classList.add("is-hidden")
     answerForm.classList.remove("is-hidden")
-    console.log(text)
-    form.reset()
   } catch (error) {
     alert("Ошибка! Такие данные уже используются.")
-    console.log(error.message)
     form.reset()
   }
 }
