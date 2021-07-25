@@ -4,7 +4,10 @@
   --title-color: #9c465e;
   --description-color: #cc7697;
   --title-theme-color: #212121;
+  --accent-color: #cfc5e0;
   --error-color: #f44336;
+  --valid-color: #4caf50;
+  --price-color: #898591;
 }
 *,
 *::before,
@@ -71,7 +74,7 @@ img {
 }
 .title-price-item {
   text-decoration: line-through;
-  color: #9992a3;
+  color: var(--price-color);
 }
 .title-price-item-new {
   font-weight: 600;
@@ -99,6 +102,9 @@ img {
   margin-top: 105px;
   margin-left: 20px;
 }
+.title-form {
+  color: var(--title-theme-color);
+}
 .name,
 .number {
   display: flex;
@@ -113,7 +119,7 @@ img {
   margin-top: 10px;
 }
 input.valid {
-  border-color: #4caf50;
+  border-color: var(--valid-color);
 }
 input.invalid {
   border-color: var(--error-color);
@@ -139,7 +145,7 @@ input.invalid {
   line-height: 1.875;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
-  color: var(--secondary-color);
+  color: var(--title-theme-color);
   margin-top: 10px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -186,7 +192,7 @@ input.invalid {
 .value {
   padding: 15px;
   border-radius: 3px;
-  background: #cfc5e0;
+  background: var(--accent-color);
   display: inline-block;
 }
 .label {
