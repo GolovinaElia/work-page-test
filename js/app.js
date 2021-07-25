@@ -8,15 +8,21 @@ form.onsubmit = async (event) => {
     method: "POST",
     body: new FormData(form),
   })
-  try {
-    let text = await response.text()
+  await response.json().then((data) => {
+    responseForm(data)
+  })
+}
+
+function responseForm(response) {
+  if (response.message === "Phone is invalid") {
+    alert("Заказ не создан! Введите верные данные!")
+  } else if (response.message === "OK") {
     form.classList.add("is-hidden")
     answerForm.classList.remove("is-hidden")
-  } catch (error) {
-    alert("Ошибка! Такие данные уже используются.")
     form.reset()
   }
 }
+
 function orderForm() {
   setTimeout(() => {
     answerForm.classList.add("is-hidden")
